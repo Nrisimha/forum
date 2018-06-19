@@ -1,20 +1,21 @@
-For using that forum you will need: \n
--ArangoDB installed and launched \n
--database 'helium' \n
+For using that forum you will need: 
+* ArangoDB installed and launched 
+* database 'helium' 
 For more info about connection to database go to venus\Config\Services.php
 
 Here is a list of collections in 'helium' database:
 
-forum_categories \n
-forum_groups \n
-forum_messages \n
-forum_reply \n
-forum_subjects \n
-login \n
-topics \n
-users \n
+* forum_categories
+* forum_groups 
+* forum_messages 
+* forum_reply 
+* forum_subjects 
+* login 
+* topics 
+* users 
 
-Simple data for forum_categories: \n
+Simple data for forum_categories: 
+```
 {
   "description": "Oyuncular tarafından hazırlanmış rehberler ve ipuçları sayesinde Ejder Yolu oynarken ihtiyaç duyacağınız bilgileri burada bulabilirsiniz.",
   "group": "tr_ejderyolu",
@@ -24,15 +25,17 @@ Simple data for forum_categories: \n
   "order": 200,
   "total_topics": 0
 }
-
-Simple data for forum_groups: \n
+```
+Simple data for forum_groups: 
+```
 {
   "lang": "tr",
   "name": "War2 - Red Alert",
   "order": 300
 }
-
-Simple data for forum_messages: \n
+```
+Simple data for forum_messages: 
+```
 {
   "by": "FDX70XM2L1",
   "hidden": true,
@@ -45,12 +48,14 @@ Simple data for forum_messages: \n
   "time": 1523458292,
   "by": "FJO2QZYKZ6"
 }
-
-Simple data for forum_reply (it is a graph): \n
+```
+Simple data for forum_reply (it is a graph): 
+```
 _from:forum_subjects/13827729 \n
 _to:forum_messages/13827733
-
-Simple data for forum_subjects: \n
+```
+Simple data for forum_subjects: 
+```
 {
   "category": "ejderyolu",
   "subject": "Aktualizacje 29 marca (łączenie serwerów) 2",
@@ -59,20 +64,23 @@ Simple data for forum_subjects: \n
   "time": 1523457661,
   "by": "FJO2QZYKZ6"
 }
-
-Simple data for login: \n
+```
+Simple data for login: 
+```
 {
   "email": "osman4@osman.com",
   "password": "osman4",
   "user": "FFDJMHXPAF",
   "vendor": "salacom"
 }
-
-Simple data for topics (it is a graph): \n
+```
+Simple data for topics (it is a graph): 
+```
 _from:courses/31619135 \n
 _to:tags/31619342
-
-Simple data for users: \n
+```
+Simple data for users: 
+```
 {
   "added_partners": null,
   "avatar": "https://www.gravatar.com/avatar/470563722de2fff0a8c262bd434ae97c",
@@ -96,3 +104,4 @@ Simple data for users: \n
   ],
   "surname": "Marley"
 }
+```
