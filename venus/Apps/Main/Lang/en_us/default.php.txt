@@ -1,0 +1,115 @@
+<?php
+$at["__meta"]["default"] = [
+  "language" => "tr",
+  "file" => __FILE__,
+  "version" => "1.0",
+  "date" => "4 Apr 2017",
+  "author" => "Metehan Arslan"
+];
+/*******************************************************************************************\
+ NOTES FOR TRANSLATORS:
+	 1- You should ignore every text after double slash: //double slashes for explanation.
+	 2- Only translate text between equality symbol and decimal mark (= and ;)
+	 English:
+	 	$at["welcome_text"] = "Hello, How are you";
+	 Spanish:
+	 	$at["welcome_text"] = "Hola, Como estas";
+/*******************************************************************************************\
+* Main
+*/
+$at["site_name"] = "FORUM";
+$at["page_title"] = "FORUM Forums";
+$at["forum"] = "Forum";
+$at["wiki"] = "Wiki &amp; Guides";// &and; generates and symbol: &
+$at["wiki_temp_message"] = "Wiki area will be activated soon stay tuned!";
+$at["support"] = "Support";
+$at["ticket_system_notice"] = "FORUM's support system will be moved to here soon. For now you can use this link: ";
+$at["ticket_system_link"] = " Support System";
+$at["footer_copyright"] = "&copy; Copyright 2017 FORUM - All rights reserved"; // &copy; generates copyright symbol: ©
+
+/*
+* Forums
+*/
+$at["forum_categories"] = "Forum - Categories";
+$at["forum_topics"] = "Topics";
+$at["forum_last_message"] = "Last message";
+$at["forum_reply_to_topic"] = "Reply to the topic";
+$at["forum_send_message"] = "Send Message";
+$at["forum_login_message"] = "Only registered memebers can reply to this topic. Please login to reply.";
+$at["forum_rules"] = "Rules";
+$at["forum_quick_rules"] = "☉ Don't send spam messages.<br />☉ Avoid arguing with people.<br />☉ Only style the text when it's really necessary.<br />☉ Using bad words may cause permanent ban.<br />";
+$at["forum_views"] = "views";//this word will appear after view count - sample: 59 views
+$at["forum_replies"] = "comments";//this word will appear after reply count - sample: 59 comments
+$at["forum_started_by"] = "Started by";//this will appear before an username - sample: Started by BarackObama
+$at["forum_started_by"] = "Started by";//this will appear before an username - sample: Started by BarackObama
+$at["forum_new_topic"] = "New topic";
+$at["forum_subject"] = "Title";//title,topic,subject
+$at["forum_content"] = "Content";//content of message
+$at["forum_all_forums"] = "&lt; All forums";//&lt; generates back arrow symbol: <
+$at["forum_back_button"] = "&lt; Back";//&lt; generates back arrow symbol: <
+$at["send_button"] = "Send";
+
+/*
+* User
+*/
+$at["user_operations"] = "User Operations";
+$at["user_profile"] = "User Profile";
+$at["sign_up"] = "Sign Up";
+$at["login"] = "Login";
+$at["logout"] = "Logout";
+$at["you_are_not_logged_in"] = "You are not logged in!";
+
+
+/*
+* Forms
+*/
+$at["form_email"] = "E-Mail";
+$at["form_password"] = "Password";
+$at["form_password_repeat"] = "Confirm Password";
+$at["form_nick"] = "Username"; //This for username
+$at["form_iagree"] = "I agree terms and conditions.";
+$at["form_didnt_agree"] = "You should accept terms and conditions in order to register an account.";
+$at["form_error_csrf"] = "CSRF error, please try again!";
+
+
+/*
+* Validation
+*/
+$at["nick_is_required"] = "Username is obligatory.";
+$at["nick_must_be_alphanumeric"] = "Username must be alphanumeric. (a-z 0-9)";
+$at["email_is_required"] = "The e-mail is required.";
+$at["email_not_valid"] = "The e-mail you provided is not valid.";
+$at["password_required"] = "The password is required.";
+$at["password_minimum"] = "The password must be longer than %s characters.";
+$at["password_confirmation_failed"] = "Password doesn't match with confirmation.";
+$at["password_confirmation_required"] = "The password confirmation is required.";
+$at["terms_requred"] = "Terms and conditions must be accepted.";
+
+/*
+* Flash messages
+*/
+//User Controller
+$at["the_email_or_username_already_registered"] = "The email or username already in use!";
+$at["you_have_registered"] = "Success, you have registered!";
+$at["you_have_logged_in"] = "Success, you have logged in!";
+$at["wrong_email_or_password"] = "Wrong email-password combination!";
+$at["there_is_no_user_with_this_email"] = "There is no user with this email!";
+
+//Forum Controller
+$at["minimum_content_lenght_must_be_CONL_and_subject_SUBL_characters"] = "Minimum content lenght must be %conl% and subject %subl% characters.";
+$at["the_new_topic_is_created"] = "The new topic is created.";
+$at["you_cant_create_new_topics_this_often_please_wait"] = "You can't create new subjects very often. Please wait.";
+$at["the_message_must_be_longer_than_S_chars"] = "The message must be longer than %s chars.";
+$at["your_message_has_been_added"] = "Your message has been added!";
+$at["you_cant_send_messages_this_often_please_wait"] = "You can't send messages this often. Please wait.";
+
+/*
+* HTTP Errors
+*/
+$at["http404"] = "404 Not Found";
+$at["http404_message"] = "If you see this page probably you have tried to reach a deleted content or it's our fault sorry about it :)";
+
+
+return $at;
+
+?>

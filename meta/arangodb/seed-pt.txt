@@ -1,0 +1,96 @@
+/******************** MAIN FORUM ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'pt_princial',    //Change it to your language key: tr_main, it_main, es_main etc..
+  'lang': 'pt',        //Change it to your language key: tr, es, pt, ru, it, fr, pl,
+  'name': 'Princial',      //It maybe named: Main or Genral or All etc..
+  'order': 100
+}
+INTO forum_groups
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'salagame-portugues', //Change it to your language in your language for example for spanish it will be "salagame-espanol" not "salagame-spanish"  (URL friendly)
+  'name': 'SalaGame',
+  'description': 'Veja novidades e notícias importantes aqui.', //Translate
+  'language': 'pt',    //Change it to your language key
+  'group': 'pt_princial',  //This area must be same with above mentioned group "_key"
+  'write_roles': ['employee','admin'], //Ignore
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'princial', // If it's also "general" in your language find another word these names must be unique (URL friendly)
+  'name': 'Chat Princial', //Translate
+  'description': 'Essa área é para assuntos ligados a todos os jogos ou para aqueles que não tem uma categoria específica.',
+  'language': 'pt',   //Change it to your language key
+  'group': 'pt_princial', //This area must be same with above mentioned group "_key"
+  'hidden': false,    //Ignore
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/******************** Cavaleiro do Dragão********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'pt_cavaleiro-do-dragao', //URL friendly chars of game name starting with language key
+  'lang': 'pt',//Change it to your language key
+  'name': 'Cavaleiro do Dragão', //Game name
+  'order': 200
+}
+INTO forum_groups
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key': 'pt-cavaleiro-do-dragao', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'Cavaleiro do Dragão', //Game name
+  'description': 'Aqui você pode saber tudo sobre Cavaleiro do Dragão.', // Change
+  'language': 'pt', //Change
+  'group': 'pt_cavaleiro-do-dragao', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'cdd-guias', //Change
+  'name': 'Guias e Estratégias', // Change
+  'description': 'Aqui você encontrará guias para o jogo e dicas sobre Cavaleiro do Dragão, feitas por outros jogadores.',
+  'language': 'pt', //Change
+  'group': 'pt_cavaleiro-do-dragao', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'cdd-apoio-da-comunidade', //Change
+  'name': 'Apoio da Comunidade',
+  'description': 'Aqui você encontrará guias para o jogo e dicas sobre Cavaleiro do Dragão, feitas por outros jogadores.',
+  'language': 'pt',
+  'group': 'pt_cavaleiro-do-dragao', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/****************************************************/
+
+

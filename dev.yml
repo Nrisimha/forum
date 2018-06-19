@@ -1,0 +1,40 @@
+version: "2"
+services:
+  phalcon:
+    extends:
+      service: phalcon
+      file: common.yml
+    environment:
+      - DBURL=tcp://arangodb:8529
+      - DBUSER=root
+      - DBPASS=root
+      - VIRTUAL_HOST=beta.salagame.net
+      - ENVIRONMENT_TYPE=development
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - arangodb
+    ports:
+      - "80:80"
+    links:
+      - arangodb
+
+  arangodb:
+    extends:
+      service: arangodb
+      file: common.yml
+    environment:
+      - ARANGO_ROOT_PASSWORD=root
+    volumes:
+      - ./meta/arangodb/db:/var/lib/arangodb3
+    ports:
+      - "8529:8529"
+
+  elm:
+    extends:
+      service: elm
+      file: common.yml
+    volumes:
+      - ./deskelm:/home/node/app
+    ports:
+      - "3100:3100"

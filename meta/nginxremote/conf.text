@@ -1,0 +1,32 @@
+server {
+    listen	80;
+    listen [::]:80;
+    #listen       443;
+    #listen [::]:443;
+    #ssl          on;
+    #ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;  # don?~@~Yt use SSLv3 ref: POODLE
+    #ssl_ciphers         HIGH:!aNULL:!MD5;
+
+    #ssl_certificate        /etc/nginx/invideoapp.com/invideoapp.crt;
+    #ssl_certificate_key    /etc/nginx/invideoapp.com/invideoapp.key;
+    root /var/www;
+    index index.html index.htm;
+    #logs
+    access_log /var/log/{JOB_NAME}_access.log;
+    error_log /var/log/{JOB_NAME}_error.log;
+    # Increasing the number of MB per upload
+    client_max_body_size 100M;
+    # Make site accessible from http://localhost/
+    server_name {DOMAIN};
+    location / {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        if (!-f $request_filename) {
+            proxy_pass http://127.0.0.1:{PROXY_PORT};
+            break;
+        }
+    }
+}

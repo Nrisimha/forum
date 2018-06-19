@@ -1,0 +1,105 @@
+/****************************************************
+Notes for translators:
+1- Translate texts after colon (:) 
+2- Ignore texts after double slash ( // ) It's for explanation
+3- This file generates forum categories for a language.
+4- Forum will have a forum group for each game we publish on the language. There will be another group for general usage (main forum). So each language will have game number plus one group.
+5- You can delete or add new forum group according to the games published in your language.
+6- This file made for English so it's only contains the games we publish in English.
+7- This is not translation file this is a sample file for configuration. Every language will be unique.
+8- URL Firendly means the characters allowed in domain names so you can't use spraces and language spesific chars like: ü ö ş ç etc.. only english characters and dash (-)
+
+/******************** MAIN FORUM ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'en_main',    //Change it to your language key: tr_main, it_main, es_main etc..
+  'lang': 'en',        //Change it to your language key: tr, es, pt, ru, it, fr, pl,
+  'name': 'Main',      //It maybe named: Main or Genral or All etc..
+  'order': 100
+}
+INTO forum_groups
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'salagame-english', //Change it to your language in your language for example for spanish it will be "salagame-espanol" not "salagame-spanish"  (URL friendly)
+  'name': 'SalaGame',
+  'description': 'You can follow official announcements and new here.', //Translate
+  'language': 'en',    //Change it to your language key
+  'group': 'en_main',  //This area must be same with above mentioned group "_key"
+  'write_roles': ['employee','admin'], //Ignore
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'general', // If it's also "general" in your language find another word these names must be unique (URL friendly)
+  'name': 'General Chat', //Translate
+  'description': 'This are for the topics which related to all games or for those not fitting other areas.',
+  'language': 'en',   //Change it to your language key
+  'group': 'en_main', //This area must be same with above mentioned group "_key"
+  'hidden': false,    //Ignore
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/******************** MASTER MUST DIE ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'en_biowar', //URL friendly chars of game name starting with language key
+  'lang': 'en',//Change it to your language key
+  'name': 'BioWar II', //Game name
+  'order': 200
+}
+INTO forum_groups
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'biowar', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'BioWar II', //Game name
+  'description': 'This area for everything related BioWar II game.', // Change
+  'language': 'en', //Change
+  'group': 'en_biowar', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'biowar-guides', //Change
+  'name': 'Guides and Strategy', // Change
+  'description': 'In this section you can find game guides and tips about BioWar II  prepared by other players.',
+  'language': 'en', //Change
+  'group': 'en_biowar', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'biowar-community-support', //Change
+  'name': 'Community Support',
+  'description': 'You may ask your questions to experienced players and you can share your ideas in this section.',
+  'language': 'en',
+  'group': 'en_biowar', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/****************************************************/

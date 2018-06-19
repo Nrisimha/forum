@@ -1,0 +1,40 @@
+version: "2"
+services:
+  phalcon:
+    extends:
+      file: common.yml
+      service: phalcon
+    environment:
+      - DBURL=tcp://arangodb:8529
+      - DBUSER=root
+      - DBPASS=root
+      - VIRTUAL_HOST=beta.salagame.net
+      - ENVIRONMENT_TYPE=production
+    build:
+      context: .
+      dockerfile: Dockerfileprod
+    ports:
+      - "9000:80"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: "docker.{{.Name}}"
+    depends_on:
+      - arangodb
+
+  arangodb:
+    extends:
+      file: common.yml
+      service: arangodb
+    environment:
+      - ARANGO_ROOT_PASSWORD=root
+    volumes:
+      - ./meta/arangodb/db:/var/lib/arangodb3
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: "docker.{{.Name}}"
+    ports:
+      - "8502:8529"

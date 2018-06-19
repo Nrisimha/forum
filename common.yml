@@ -1,0 +1,11 @@
+version: "2"
+services:
+  phalcon:
+    build: .
+
+  arangodb:
+    image: arangodb:latest
+
+  elm:
+    build: ./deskelm
+    command: yarn client

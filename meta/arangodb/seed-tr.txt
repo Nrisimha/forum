@@ -1,0 +1,138 @@
+/******************** MAIN FORUM ********************/
+INSERT
+{
+  '_key':'tr_main',
+  'lang': 'tr',
+  'name': 'Genel',
+  'order': 100
+}
+INTO forum_groups
+
+INSERT
+{
+  '_key':'salagame-turkce',
+  'name': 'SalaGame',
+  'description': 'Resmi duyuruları ve haberleri buradan takip edebilirsiniz.',
+  'language': 'tr',
+  'group': 'tr_main',
+  'write_roles': ['employee','admin'],
+  'hidden': false,
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+INSERT
+{
+  '_key':'genel',
+  'name': 'Genel Konular',
+  'description': 'Tüm oyunları ilgilendiren veya diğer kategorilere uygun olmayan konular için bölüm.',
+  'language': 'tr',
+  'group': 'tr_main',
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/******************** RED ALERT ********************/
+INSERT
+{
+  '_key':'tr_redalert',
+  'lang': 'tr',
+  'name': 'War2 - Red Alert',
+  'order': 300
+}
+INTO forum_groups
+
+INSERT
+{
+  '_key':'war2-redalert',
+  'name': 'War2 - Red Alert',
+  'description': 'Ejder Yolu hakkında herşeyi konuşabileceğiniz serbest konuşma alanıdır.',
+  'language': 'tr',
+  'group': 'tr_redalert',
+  'hidden': false,
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+INSERT
+{
+  '_key':'w2-rehberler',
+  'name': 'Rehberler ve Strateji',
+  'description': 'Oyuncular tarafından hazırlanmış rehberler ve ipuçları sayesinde War2 - Red Alert oynarken ihtiyaç duyacağınız bilgileri burada bulabilirsiniz.',
+  'language': 'tr',
+  'group': 'tr_redalert',
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+
+INSERT
+{
+  '_key':'war2-destek',
+  'name': 'Topluluk Yardımlaşması',
+  'description': 'Oyunla alakalı sorularınızı deneyimli oyunculara bu bölümden sorabilirsiniz. Fikirlerinizi paylaşabilirsiniz',
+  'language': 'tr',
+  'group': 'tr_redalert',
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/******************** EJDER YOLU ********************/
+
+INSERT
+{
+  '_key':'tr_ejderyolu',
+  'lang': 'tr',
+  'name': 'Ejder Yolu',
+  'order': 200
+}
+INTO forum_groups
+
+INSERT
+{
+  '_key': 'ejderyolu',
+  'name': 'Ejder Yolu',
+  'description': 'Ejder Yolu hakkında herşeyi konuşabileceğiniz serbest konuşma alanıdır.',
+  'language': 'tr',
+  'group': 'tr_ejderyolu',
+  'hidden': false,
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+INSERT
+{
+  '_key':'ey-rehberler',
+  'name': 'Rehberler ve Strateji',
+  'description': 'Oyuncular tarafından hazırlanmış rehberler ve ipuçları sayesinde Ejder Yolu oynarken ihtiyaç duyacağınız bilgileri burada bulabilirsiniz.',
+  'language': 'tr',
+  'group': 'tr_ejderyolu',
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+
+INSERT
+{
+  '_key':'ey-destek',
+  'name': 'Topluluk Yardımlaşması',
+  'description': 'Oyunla alakalı sorularınızı deneyimli oyunculara bu bölümden sorabilirsiniz. Fikirlerinizi paylaşabilirsiniz',
+  'language': 'tr',
+  'group': 'tr_ejderyolu',
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/****************************************************/
+

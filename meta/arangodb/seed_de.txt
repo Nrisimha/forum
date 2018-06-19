@@ -1,0 +1,95 @@
+/******************** MAIN FORUM ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'de_alles',    //Change it to your language key: tr_main, it_main, es_main etc..
+  'lang': 'de',        //Change it to your language key: tr, es, pt, ru, it, fr, pl,
+  'name': 'Alles',      //It maybe named: Main or Genral or All etc..
+  'order': 100
+}
+INTO forum_groups
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'salagame-deutsch', //Change it to your language in your language for example for spanish it will be "salagame-espanol" not "salagame-spanish"  (URL friendly)
+  'name': 'SalaGame',
+  'description': 'Hier finden Sie die wichtigsten Anzeigen und Neuigkeiten.', //Translate
+  'language': 'de',    //Change it to your language key
+  'group': 'de_alles',  //This area must be same with above mentioned group "_key"
+  'write_roles': ['employee','admin'], //Ignore
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'alles', // If it's also "general" in your language find another word these names must be unique (URL friendly)
+  'name': 'Hauptchat', //Translate
+  'description': 'Hier finden Sie Themen, die für alle Spielen gelten oder keiner Kategorie untergeordnet sind.',
+  'language': 'de',   //Change it to your language key
+  'group': 'de_alles', //This area must be same with above mentioned group "_key"
+  'hidden': false,    //Ignore
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/******************** Gewehr und Magie********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'de_gewehr-und-magie', //URL friendly chars of game name starting with language key
+  'lang': 'de',//Change it to your language key
+  'name': 'Gewehr und Magie', //Game name
+  'order': 200
+}
+INTO forum_groups
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key': 'de_gewehr-und-magie', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'Gewehr und Magie', //Game name
+  'description': 'Hier finden Sie alles, was mit dem Spiel Gewehr und Magie verbunden ist..', // Change
+  'language': 'de', //Change
+  'group': 'de_gewehr-und-magie', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'gum-guides', //Change
+  'name': 'Guides und Strategien', // Change
+  'description': 'Hier finden Sie Tipps und Guides für das Spiel Gewehr und Magie, die von den anderen Spielern vorbereitet sind.',
+  'language': 'de', //Change
+  'group': 'de_gewehr-und-magie', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'gum-unterstutzung', //Change
+  'name': 'Unterstützung',
+  'description': 'Hier können Sie Fragen den mehr erfahrenen Spielern stellen und Ihre Ideen mit anderen teilen.',
+  'language': 'de',
+  'group': 'de_gewehr-und-magie', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/****************************************************/
+ 

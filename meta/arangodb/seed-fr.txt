@@ -1,0 +1,205 @@
+/******************** MAIN FORUM ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'fr_principal',    //Change it to your language key: tr_main, it_main, es_main etc..
+  'lang': 'fr',        //Change it to your language key: tr, es, pt, ru, it, fr, pl,
+  'name': 'Principal',      //It maybe named: Main or Genral or All etc..
+  'order': 100
+}
+INTO forum_groups
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'salagame-francais', //Change it to your language in your language for example for spanish it will be "salagame-espanol" not "salagame-spanish"  (URL friendly)
+  'name': 'SalaGame',
+  'description': 'Vous pouvez suivre les annonces et les nouvelles importantes ici.', //Translate
+  'language': 'fr',    //Change it to your language key
+  'group': 'fr_principal',  //This area must be same with above mentioned group "_key"
+  'write_roles': ['employee','admin'], //Ignore
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'principal', // If it's also "general" in your language find another word these names must be unique (URL friendly)
+  'name': 'Chat Principal', //Translate
+  'description': 'Ceci est pour les sujets liés à tous les jeux ou pour ceux sans catégorie spécifiée.', 
+  'language': 'fr',   //Change it to your language key
+  'group': 'fr_principal', //This area must be same with above mentioned group "_key"
+  'hidden': false,    //Ignore
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/******************** MASTER MUST DIE ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'fr_maitre-doit-mourir', //URL friendly chars of game name starting with language key
+  'lang': 'fr',//Change it to your language key
+  'name': 'Maître doit mourir', //Game name
+  'order': 200
+}
+INTO forum_groups
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'fr-maitre-doit-mourir', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'Maître doit mourir', //Game name
+  'description': 'Cette zone est pour tout ce qui est lié é Maître doit mourir.', // Change
+  'language': 'fr', //Change
+  'group': 'fr_maitre-doit-mourir', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'mdm-guides', //Change
+  'name': 'Guides et Stratégie', // Change
+  'description': 'Dans cette section, vous pouvez trouver les guides du jeu et des astuces sur Maître Doit Mourir préparées par d\'autres joueurs.',
+  'language': 'fr', //Change
+  'group': 'fr_maitre-doit-mourir', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'mmd-communaute-support', //Change
+  'name': 'Communauté Support',
+  'description': 'Vous pouvez poser vos questions aux joueurs expériementés et vous pouvez partager vos idées dans cette section.',
+  'language': 'fr',
+  'group': 'fr_maitre-doit-mourir', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/****************************************************/
+ 
+/******************** ARMES ET MAGIE ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'fr_armes-et-magie', //URL friendly chars of game name starting with language key
+  'lang': 'fr',//Change it to your language key
+  'name': 'Armes et Magie', //Game name
+  'order': 200
+}
+INTO forum_groups
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'fr_armes-et-magie', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'Armes et Magie', //Game name
+  'description': 'Cette zone est pour tout ce qui est lié à Armes et Magie.', // Change
+  'language': 'fr', //Change
+  'group': 'fr_armes-et-magie', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'aem-guides', //Change
+  'name': 'Guides et Stratégie', // Change
+  'description': 'Dans cette section, vous pouvez trouver les guides du jeu et des astuces sur Armes et Magie préparées par d\'autres joueurs.',
+  'language': 'fr', //Change
+  'group': 'fr_armes-et-magie', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'aem-communaute-support', //Change
+  'name': 'Communauté Support',
+  'description': 'Vous pouvez poser vos questions aux joueurs expériementés et vous pouvez partager vos idées dans cette section.',
+  'language': 'fr',
+  'group': 'fr_armes-et-magie', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/****************************************************/
+ 
+ 
+/******************** DRAGON 2 ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'fr_dragon-2', //URL friendly chars of game name starting with language key
+  'lang': 'fr',//Change it to your language key
+  'name': 'Dragon 2', //Game name
+  'order': 200
+}
+INTO forum_groups
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'fr_dragon-2', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'Dragon 2', //Game name
+  'description': 'Cette zone est pour tout ce qui est lié à Dragon 2.', // Change
+  'language': 'fr', //Change
+  'group': 'fr_dragon-2', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'d2-guides', //Change
+  'name': 'Guides et Stratégie', // Change
+  'description': 'Dans cette section, vous pouvez trouver les guides du jeu et des astuces sur Dragon 2 préparées par d\'autres joueurs.',
+  'language': 'fr', //Change
+  'group': 'fr_dragon-2', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'d2-communaute-support', //Change
+  'name': 'Communauté Support',
+  'description': 'Vous pouvez poser vos questions aux joueurs expériementés et vous pouvez partager vos idées dans cette section.',
+  'language': 'fr',
+  'group': 'fr_dragon-2', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+ 
+/****************************************************/

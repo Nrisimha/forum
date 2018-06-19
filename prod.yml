@@ -1,0 +1,30 @@
+version: "2"
+services:
+  phalcon:
+    extends:
+      file: common.yml
+      service: phalcon
+    environment:
+      - DBURL=tcp://arangodb:8529
+      - DBUSER=salanet
+      - DBPASS=thepassword
+      - VIRTUAL_HOST=salagame.net
+      - ENVIRONMENT_TYPE=production
+    build:
+      context: .
+      dockerfile: Dockerfileprod
+    ports:
+      - "9001:80"
+    depends_on:
+      - arangodb
+
+  arangodb:
+    extends:
+      file: common.yml
+      service: arangodb
+    environment:
+      - ARANGO_RANDOM_ROOT_PASSWORD=1
+    volumes:
+      - /home/ubuntu/arangodb/salagame.net:/var/lib/arangodb3
+    ports:
+      - "8501:8529"

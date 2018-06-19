@@ -1,0 +1,153 @@
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'es_principal',    //Change it to your language key: tr_main, it_main, es_main etc..
+  'lang': 'es',        //Change it to your language key: tr, es, pt, ru, it, fr, pl,
+  'name': 'Principal',      //It maybe named: Main or Genral or All etc..
+  'order': 100
+}
+INTO forum_groups
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'salagame-espanol', //Change it to your language in your language for example for spanish it will be "salagame-espanol" not "salagame-spanish"  (URL friendly)
+  'name': 'SalaGame',
+  'description': 'Puedes informarte de las últimas noticias aquí.', //Translate
+  'language': 'es',    //Change it to your language key
+  'group': 'es_principal',  //This area must be same with above mentioned group "_key"
+  'write_roles': ['employee','admin'], //Ignore
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'esgeneral', // If it's also "general" in your language find another word these names must be unique (URL friendly)
+  'name': 'Chat general', //Translate
+  'description': 'Hilos y posts generales con respecto a todos los juegos en general.',
+  'language': 'es',   //Change it to your language key
+  'group': 'es_principal', //This area must be same with above mentioned group "_key"
+  'hidden': false,    //Ignore
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/******************** Dragon 2 ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'es_dragon2', //URL friendly chars of game name starting with language key
+  'lang': 'es',//Change it to your language key
+  'name': 'Dragon 2', //Game name
+  'order': 200
+}
+INTO forum_groups
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'dragon2', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'Dragon 2', //Game name
+  'description': 'Esta zona es para todo lo relacionado con Dragon II.', // Change
+  'language': 'es', //Change
+  'group': 'es_dragon2', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'guias-Dragon2', //Change
+  'name': 'Guias y Estrategia', // Change
+  'description': 'En esta sección podrás encontrar guías y consejos de Dragon II hechas por otros jugadores.',
+  'language': 'es', //Change
+  'group': 'es_dragon2', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'dragon2-soporte-comunidad', //Change
+  'name': 'Soporte Comunidad',
+  'description': 'Puedes hacer preguntas o compartir tus ideas con otros jugadores en esta sección.',
+  'language': 'es',
+  'group': 'es_dragon2', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/****************************************************/
+
+
+
+
+
+
+/******************** Dragon Knight ********************/
+/*** FORUM GROUP ***/
+INSERT
+{
+  '_key':'es_dragonknight', //URL friendly chars of game name starting with language key
+  'lang': 'es',//Change it to your language key
+  'name': 'Dragon Knight', //Game name
+  'order': 200
+}
+INTO forum_groups
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'dragonknight', //URL friendly chars of game name if game published in other languages with same name add your language key like: pl-dragon-knight
+  'name': 'Dragon Knight', //Game name
+  'description': 'Esta zona es para todo lo relacionado con Dragon Knight.', // Change
+  'language': 'es', //Change
+  'group': 'es_dragonknight', // Same with forum group _key
+  'hidden': false, //Ignore
+  'order': 100,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'guias-dragonknight', //Change
+  'name': 'Guias y Estrategia', // Change
+  'description': 'En esta sección podrás encontrar guías y consejos de Dragon Knight hechas por otros jugadores.',
+  'language': 'es', //Change
+  'group': 'es_dragonknight', // Same with forum group _key
+  'hidden': false,
+  'order': 200,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/*** SUBJECT GROUP ***/
+INSERT
+{
+  '_key':'dragonknight-soporte-comunidad', //Change
+  'name': 'Soporte Comunidad',
+  'description': 'Puedes hacer preguntas o compartir tus ideas con otros jugadores en esta sección.',
+  'language': 'es',
+  'group': 'es_dragonknight', // Same with forum group _key
+  'hidden': false,
+  'order': 300,
+  'total_topics': 0
+}
+INTO forum_categories
+
+/****************************************************/
