@@ -1,6 +1,7 @@
 For using that forum you will need: 
 * ArangoDB installed and launched 
 * database 'helium' 
+
 For more info about connection to database go to venus\Config\Services.php
 
 Here is a list of collections in 'helium' database:

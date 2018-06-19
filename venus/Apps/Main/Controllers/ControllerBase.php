@@ -32,7 +32,7 @@ class ControllerBase extends Controller
       /*
       * CORS enable
       */
-      $this->response->setHeader('Access-Control-Allow-Origin', '*.salagame.net');
+      $this->response->setHeader('Access-Control-Allow-Origin', '*.FORUM.net');
       /*
       * Load Lockers
       */
