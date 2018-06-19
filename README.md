@@ -1,20 +1,20 @@
-For using that forum you will need:
--ArangoDB installed and launched
--database 'helium'
+For using that forum you will need: \n
+-ArangoDB installed and launched \n
+-database 'helium' \n
 For more info about connection to database go to venus\Config\Services.php
 
 Here is a list of collections in 'helium' database:
 
-forum_categories
-forum_groups
-forum_messages
-forum_reply
-forum_subjects
-login
-topics
-users
+forum_categories \n
+forum_groups \n
+forum_messages \n
+forum_reply \n
+forum_subjects \n
+login \n
+topics \n
+users \n
 
-Simple data for forum_categories:
+Simple data for forum_categories: \n
 {
   "description": "Oyuncular tarafından hazırlanmış rehberler ve ipuçları sayesinde Ejder Yolu oynarken ihtiyaç duyacağınız bilgileri burada bulabilirsiniz.",
   "group": "tr_ejderyolu",
@@ -25,31 +25,32 @@ Simple data for forum_categories:
   "total_topics": 0
 }
 
-Simple data for forum_groups:
+Simple data for forum_groups: \n
 {
   "lang": "tr",
   "name": "War2 - Red Alert",
   "order": 300
 }
 
-Simple data for forum_messages:
+Simple data for forum_messages: \n
 {
   "by": "FDX70XM2L1",
   "hidden": true,
   "message": "<p class=\"cye-lm-tag\"><img style=\"width: 52px;\" src=\"https://f001.backblazeb2.com/file/salabox/-1201331.png\"><br></p>",
   "time": 1491066821
 }
+
 {
   "message": "<p>Ahaha, right, le's discuss that. What color of merging do you prefer? </p>",
   "time": 1523458292,
   "by": "FJO2QZYKZ6"
 }
 
-Simple data for forum_reply (it is a graph):
-_from:forum_subjects/13827729
+Simple data for forum_reply (it is a graph): \n
+_from:forum_subjects/13827729 \n
 _to:forum_messages/13827733
 
-Simple data for forum_subjects:
+Simple data for forum_subjects: \n
 {
   "category": "ejderyolu",
   "subject": "Aktualizacje 29 marca (łączenie serwerów) 2",
@@ -59,7 +60,7 @@ Simple data for forum_subjects:
   "by": "FJO2QZYKZ6"
 }
 
-Simple data for login:
+Simple data for login: \n
 {
   "email": "osman4@osman.com",
   "password": "osman4",
@@ -67,11 +68,11 @@ Simple data for login:
   "vendor": "salacom"
 }
 
-Simple data for topics (it is a graph):
-_from:courses/31619135
+Simple data for topics (it is a graph): \n
+_from:courses/31619135 \n
 _to:tags/31619342
 
-Simple data for users:
+Simple data for users: \n
 {
   "added_partners": null,
   "avatar": "https://www.gravatar.com/avatar/470563722de2fff0a8c262bd434ae97c",
