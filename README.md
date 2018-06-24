@@ -1,7 +1,7 @@
 For using that forum you will need: 
 * ArangoDB installed and launched 
 * database 'helium' 
-
+* composer (it will help to build dependencies)
 For more info about connection to database go to venus\Config\Services.php
 
 Here is a list of collections in 'helium' database:
@@ -14,6 +14,7 @@ Here is a list of collections in 'helium' database:
 * login 
 * topics 
 * users 
+* land_pages
 
 Simple data for forum_categories: 
 ```

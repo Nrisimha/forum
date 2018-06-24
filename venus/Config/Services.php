@@ -129,9 +129,9 @@ $di->setShared(
     function () {
     try{
         $connectionOptions = array(
-            ConnectionOptions::OPTION_ENDPOINT => getenv('DBURL'),
-            ConnectionOptions::OPTION_AUTH_USER => getenv('DBUSER'),
-            ConnectionOptions::OPTION_AUTH_PASSWD => getenv('DBPASS'),
+            ConnectionOptions::OPTION_ENDPOINT => 'tcp://127.0.0.1:8529',//getenv('DBURL'),
+            ConnectionOptions::OPTION_AUTH_USER => 'root',//getenv('DBUSER'),
+            ConnectionOptions::OPTION_AUTH_PASSWD => '',// getenv('DBPASS'),
             ConnectionOptions::OPTION_AUTH_TYPE => 'Basic', // only option is Basic
             ConnectionOptions::OPTION_DATABASE => 'helium',
             ConnectionOptions::OPTION_CONNECTION => 'Keep-Alive', // Close or Keep-Alive
