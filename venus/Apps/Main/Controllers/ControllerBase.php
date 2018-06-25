@@ -37,8 +37,6 @@ class ControllerBase extends Controller
       * Load Lockers
       */
         $this->locker->addLocks(include(__DIR__.'/../Config/Locker.php'));
-        $base = new BaseModel($this->connection);
-        $this->view->lands = $base->getLands();
     }
 
       public function sendJson($data) {

@@ -2,10 +2,7 @@
 /.phalcon/*
 /.vscode/*
 */.vscode/*
-/public/static/app/*
-/public/static/img/*
 /public/static/vendor/*
-/public/static/fonts/*
 /public/static/desk/*
 .idea
 */node_modules/*
