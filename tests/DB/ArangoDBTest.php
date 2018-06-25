@@ -55,7 +55,7 @@ class ArangoTest extends \UnitTestCase
             ConnectionOptions::OPTION_ENDPOINT => 'tcp://127.0.0.1:8529',
             ConnectionOptions::OPTION_AUTH_TYPE => 'Basic', // only option is Basic
             ConnectionOptions::OPTION_AUTH_USER => 'root',
-            ConnectionOptions::OPTION_AUTH_PASSWD => 'root',
+            ConnectionOptions::OPTION_AUTH_PASSWD => '',
             ConnectionOptions::OPTION_CONNECTION => 'Keep-Alive', // Close or Keep-Alive
             ConnectionOptions::OPTION_TIMEOUT => 3, // seconds
             ConnectionOptions::OPTION_RECONNECT => true,
