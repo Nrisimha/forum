@@ -441,14 +441,14 @@ class UserController extends ControllerBase
           foreach($new_roles as $key => $item){
             array_push($roles, $key);
           };
-          $partnerModel = new PartnerModel($this->connection);
-          if(in_array('partner',$roles)){
-            //add user's _key to array 'partners' in each element in land_pages  
-              $partnerModel->addPartnerToLandPages($_key);
-          }else{
-            //remove user's key from array 'partners' in each element in land_pages  
-            $partnerModel->removePartnerFromLandPages($_key);
-          }
+          // $partnerModel = new PartnerModel($this->connection);
+          // if(in_array('partner',$roles)){
+          //   //add user's _key to array 'partners' in each element in land_pages  
+          //     $partnerModel->addPartnerToLandPages($_key);
+          // }else{
+          //   //remove user's key from array 'partners' in each element in land_pages  
+          //   $partnerModel->removePartnerFromLandPages($_key);
+          // }
           $model->set('roles',$roles);
           $model->set('added_partners',$this->request->getPost('send_to_partner'));
 
@@ -504,7 +504,7 @@ class UserController extends ControllerBase
       $updateForm  = new PartnerForm();
       $this->view->form = $updateForm;              
       $patner = new PartnerModel($this->connection);
-      $this->view->payments = $patner->getPayments($user_key);
+      $this->view->payments = null;
     }else{
       $this->flash->error($this->text->simple('you_have_no_access'));
     }

@@ -22,10 +22,6 @@
                                 <div class="col-sm-10">
                                     <label class="col-sm-2 control-label">{{ data['forumtitle'] }}</label>
                                 </div>
-                                <label class="col-sm-2 control-label">{{ text.simple('email') }}</label>
-                                <div class="col-sm-10">
-                                    <label class="col-sm-2 control-label">{{ data['email'] }}</label>
-                                </div>
                                 {% if data['name'] is defined %}
                                 <label class="col-sm-2 control-label">{{ text.simple('name') }}</label>
                                 <div class="col-sm-10">
@@ -52,24 +48,24 @@
                                     <label class="col-sm-2 control-label">{{ data['info'] }}</label>
                                 </div>
                                 {% endif %} {% if data['roles'] is defined %}
-                                
+
                                 <label class="col-sm-2 control-label">{{ text.simple('roles') }}</label>
                                 <div class="col-sm-10">
-                                    {% for role in data['roles'] %}                                    
-                                    <label class="col-sm-2 control-label">{{role}}</label>                                    
+                                    {% for role in data['roles'] %}
+                                    <label class="col-sm-2 control-label">{{role}}</label>
                                     {% endfor %}
                                 </div>
-                                {% endif %} {% if data['payout'] is defined %}   
+                                {% endif %} {% if data['payout'] is defined %}
                                 <div class="form-group">
-                                        <legend>{{ text.simple('payout_info') }}</legend>
-                                    {% for name, value in data['payout'] %}   
-                                        <label class="col-sm-2 control-label">{{ name }}</label>
-                                        <div class="col-sm-10">
-                                            <label class="col-sm-2 control-label">{{ value }}</label>
-                                        </div>
+                                    <legend>{{ text.simple('payout_info') }}</legend>
+                                    {% for name, value in data['payout'] %}
+                                    <label class="col-sm-2 control-label">{{ name }}</label>
+                                    <div class="col-sm-10">
+                                        <label class="col-sm-2 control-label">{{ value }}</label>
+                                    </div>
                                     {% endfor %}
-                                </div>                                                          
-                                
+                                </div>
+
                                 {% endif %}
                             </div>
                         </fieldset>
@@ -80,29 +76,29 @@
                                 {% if payments is not empty %}
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Time</th>
-                                                    <th>Game</th>
-                                                    <th>Amount</th>
-                                                    <th>Payment method</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    {% for i in 0..(payments|length) %}
-                                                        {% if payments[i] is defined %} 
-                                                                <tr>
-                                                                    <td>{{i}}</td>
-                                                                    <td>{% if payments[i]['time'] is not empty %}{{date("Y-m-d  H:i", payments[i]['time'])}}{% endif %}</td>
-                                                                    <td>{% if payments[i]['land'] is not empty %}{{payments[i]['land']}}{% endif %}</td>
-                                                                    <td>{{payments[i]['amount']}}</td>
-                                                                    <td>{{payments[i]['payment_method']}}</td>
-                                                                </tr>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </tbody>
-                                            </table>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Time</th>
+                                                <th>Game</th>
+                                                <th>Amount</th>
+                                                <th>Payment method</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for i in 0..(payments|length) %} {% if payments[i] is defined %}
+                                            <tr>
+                                                <td>{{i}}</td>
+                                                <td>{% if payments[i]['time'] is not empty %}{{date("Y-m-d H:i", payments[i]['time'])}}{%
+                                                    endif %}</td>
+                                                <td>{% if payments[i]['land'] is not empty %}{{payments[i]['land']}}{% endif
+                                                    %}</td>
+                                                <td>{{payments[i]['amount']}}</td>
+                                                <td>{{payments[i]['payment_method']}}</td>
+                                            </tr>
+                                            {% endif %} {% endfor %}
+                                        </tbody>
+                                    </table>
                                 </div>
                                 {% endif %}
                             </div>
@@ -124,7 +120,9 @@ FOR SCRIPTS #} {% block endofbody %}
     function myFunction() {
         $('.payout_method').cheched = true;
         $(this).parent('fieldset').remove();
-        $('.container0').append("<input type='hidden' name='email' value='{% if data['payout']['email'] is defined %}{{data['payout']['email']}}{% endif %}'>");
+        $('.container0').append(
+            "<input type='hidden' name='email' value='{% if data['payout']['email'] is defined %}{{data['payout']['email']}}{% endif %}'>"
+        );
     }
     $(document).ready(function () {
 

@@ -25,10 +25,6 @@
                                     <div class="col-sm-10">
                                         <input type="input" name="forumtitle" class="form-control" data-parsley-minlength="1" value="{% if data['forumtitle'] is defined %}{{data['forumtitle']}}{% endif %}">{{ form.messages('forumtitle') }}
                                     </div>
-                                    <label class="col-sm-2 control-label">{{ text.simple('email') }}</label>
-                                    <div class="col-sm-10">
-                                        <label class="col-sm-2 control-label">{{ data['email'] }}</label>
-                                    </div>
                                 </div>
                             </fieldset>
 
@@ -92,29 +88,10 @@
                                     {% for role in data['roles'] %}
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="roles[{{role}}]" checked value>{{role}}</label>
-                                    {% endfor %} {% if partner==false %}
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" name="roles[partner]">partner</label>
-                                    {% endif %} {{ form.messages('roles') }}
+                                    {% endfor %} {{ form.messages('roles') }}
                                 </div>
 
                             </fieldset>
-                            
-                            {% if nicknames is defined %}
-                            <fieldset>
-                                <div class="form-group {% if form.messages('partners') %}has-error{% endif %}">
-                                    <label class="col-sm-2 control-label">{{ text.simple('partners') }}</label>
-                                    <div class="col-xs-3"><select name="send_to_partner[]"  class="selectpicker" data-show-subtext="true" data-live-search="true" multiple data-selected-text-format="count">
-                                            {% for nickname in nicknames %}
-                                            <option value="{{nickname['nick']}}" {% if nickname['selected'] %} selected="selected" {% endif %} data-icon="glyphicon glyphicon-user">{{nickname['nick']}}</option>{% endfor %}
-                                        </select></div>
-                                    
-                                    
-                                   {{ form.messages('partners') }}
-                                </div>
-                                
-                            </fieldset>
-                            {% endif %} 
                             {{ form.render('csrf', ['value': security.getToken()]) }}
                             <button type="submit" class="btn btn-primary">
                                 <i class="fa fa-check"></i>{{ text.simple('save') }}</button>
@@ -128,44 +105,36 @@
         </div>
     </div>
 </section>
-{% endblock %}
-{# PAGE HEADER CONTENT#} 
-{% block pagetitle %} CHANGE_ME {% endblock %} 
-{% block meta_desc %} CHANGE_ME {% endblock %} 
-{% block meta_keywords %} CHANGE_ME {% endblock %} 
-{% block endofhead %}
+{% endblock %} {# PAGE HEADER CONTENT#} {% block pagetitle %} CHANGE_ME {% endblock %} {% block meta_desc %} CHANGE_ME {%
+endblock %} {% block meta_keywords %} CHANGE_ME {% endblock %} {% block endofhead %}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 <style>
-    @font-face{
-  font-family:'Glyphicons Halflings';
-  src:url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot');
-  src:
-    url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix') 
-    format('embedded-opentype'),
-    url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff') 
-    format('woff'),
-    url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf') 
-    format('truetype'),
-    url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') 
-    format('svg');
-}.glyphicon{
-  position:relative;
-  top:1px;
-  display:inline-block;
-  font-family:'Glyphicons Halflings';
-  font-style:normal;
-  font-weight:normal;
-  line-height:1;
-  -webkit-font-smoothing:antialiased;
-}
-.glyphicon-ok:before{content:"\e013";}
-.glyphicon-user:before{content:"\e008";}
+    @font-face {
+        font-family: 'Glyphicons Halflings';
+        src: url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot');
+        src: url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+        url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff') format('woff'),
+        url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+        url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+    }
+
+    .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .glyphicon-ok:before {
+        content: "\e013";
+    }
+
+    .glyphicon-user:before {
+        content: "\e008";
+    }
 </style>
-{% endblock %} 
-{# PAGE FOOTER CONTENT FOR SCRIPTS #} 
-{% block endofbody %}
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-<script type="text/javascript">    
-//$('#send_to_partner').multiselect();
-$('select').multipleSelect();
-</script> {% endblock %}
+{% endblock %}

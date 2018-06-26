@@ -12,98 +12,84 @@ Here is a list of collections in 'helium' database:
 * forum_reply 
 * forum_subjects 
 * login 
-* topics 
 * users 
 * land_pages
 
-Simple data for forum_categories: 
+Simple data for forum_categories (value of 'group' is a '_key' of a group from collection 'groups'): 
 ```
 {
-  "description": "Oyuncular tarafından hazırlanmış rehberler ve ipuçları sayesinde Ejder Yolu oynarken ihtiyaç duyacağınız bilgileri burada bulabilirsiniz.",
-  "group": "tr_ejderyolu",
+  "description": "Description",
+  "group": "5338074",
   "hidden": false,
-  "language": "tr",
-  "name": "Rehberler ve Strateji",
+  "language": "en",
+  "name": "First category",
   "order": 200,
-  "total_topics": 0
+  "total_topics": 1
 }
 ```
-Simple data for forum_groups: 
+Simple data for forum_groups (this one has '_key' = 5338074 in my case): 
 ```
 {
-  "lang": "tr",
-  "name": "War2 - Red Alert",
-  "order": 300
+  "lang": "en",
+  "name": "First Group",
+  "order": 200
 }
 ```
-Simple data for forum_messages: 
+Simple data for forum_messages (in field 'by' please insert '_key' of user which you have in collection 'users'): 
 ```
 {
-  "by": "FDX70XM2L1",
-  "hidden": true,
-  "message": "<p class=\"cye-lm-tag\"><img style=\"width: 52px;\" src=\"https://f001.backblazeb2.com/file/salabox/-1201331.png\"><br></p>",
-  "time": 1491066821
+  "message": "<p><span style=\"color: rgb(101, 101, 101);\">First reply in First topic in First category</span><br></p>",
+  "time": 1530000488,
+  "by": "FSO7V0RT1C"
 }
-
 {
-  "message": "<p>Ahaha, right, le's discuss that. What color of merging do you prefer? </p>",
-  "time": 1523458292,
-  "by": "FJO2QZYKZ6"
+  "message": "<p>First content in First topic in First category</p>",
+  "time": 1529999397,
+  "by": "FSO7V0RT1C"
 }
 ```
 Simple data for forum_reply (it is a graph): 
 ```
-_from:forum_subjects/13827729 \n
-_to:forum_messages/13827733
+_from:forum_subjects/5338633 
+_to:forum_messages/5338637
 ```
-Simple data for forum_subjects: 
+```
+_from:forum_subjects/5338633 
+_to:forum_messages/5339656
+```
+```
+where 5338633 is a '_key' of subjet from 'forum_subjects'
+and 5338637 and 5339656 are '_key' values of messages from 'forum_messages'
+```
+Simple data for forum_subjects (value of 'category' is a '_key' of category from collection 'categories', value of 'by' is a '_key' of user from 'users'): 
 ```
 {
-  "category": "ejderyolu",
-  "subject": "Aktualizacje 29 marca (łączenie serwerów) 2",
-  "replies": 0,
-  "views": 1,
-  "time": 1523457661,
-  "by": "FJO2QZYKZ6"
+  "category": "5337984",
+  "subject": "First topic in First category",
+  "replies": 1,
+  "views": 3,
+  "time": 1529999397,
+  "by": "FSO7V0RT1C"
 }
 ```
-Simple data for login: 
+Simple data for login (value of 'user' is a '_key' of user from collection 'users'): 
 ```
 {
+  "ref": "",
+  "user": "FSO7V0RT1C",
+  "vendor": "salacom",
   "email": "osman4@osman.com",
-  "password": "osman4",
-  "user": "FFDJMHXPAF",
-  "vendor": "salacom"
+  "password": "osman4"
 }
-```
-Simple data for topics (it is a graph): 
-```
-_from:courses/31619135 \n
-_to:tags/31619342
 ```
 Simple data for users: 
 ```
 {
-  "added_partners": null,
-  "avatar": "https://www.gravatar.com/avatar/470563722de2fff0a8c262bd434ae97c",
-  "company_name": "REGGY",
-  "email": "user2@venus.dev",
+  "nick": "osman4",
   "forumtitle": "☆",
-  "info": "cool guy",
-  "name": "Bob",
-  "nick": "user2",
-  "partner_site": "https://www.gry-online.pl",
-  "payout": {
-    "automatic": true,
-    "email": "titov@dlit.dp.ua",
-    "method": "payoneer"
-  },
-  "phone": "+825180000",
-  "ref": 1,
+  "avatar": "https://www.gravatar.com/avatar/5008bc4272b4a460db2a819746eba443",
   "roles": [
-    "user",
-    "partner"
-  ],
-  "surname": "Marley"
+    "user"
+  ]
 }
 ```
