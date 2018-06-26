@@ -1,0 +1,61 @@
+[24-Jun-2018 20:20:03 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[24-Jun-2018 20:20:07 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[24-Jun-2018 20:20:08 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[24-Jun-2018 20:48:23 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[24-Jun-2018 20:48:25 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[24-Jun-2018 20:48:26 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[24-Jun-2018 20:48:30 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:39:47 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:39:52 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:39:57 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:40:04 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:40:45 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:40:46 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:41:07 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[25-Jun-2018 22:41:16 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[26-Jun-2018 07:20:37 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[26-Jun-2018 09:20:38 Europe/Rome] PHP Notice:  Undefined index: email in D:\Dev\Php\forum\cache\views\d--dev-php-forum-venus-apps-main-views-user-profile.volt.php on line 111
+[26-Jun-2018 09:20:38 Europe/Rome] PHP Stack trace:
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   1. {main}() D:\Dev\Php\forum\public\index.php:0
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   2. Phalcon\Mvc\Application->handle() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   3. Phalcon\Mvc\View->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   4. Phalcon\Mvc\View->_engineRender() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   5. Phalcon\Mvc\View\Engine\Volt->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   6. Phalcon\Mvc\View\Engine\Volt->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:38 Europe/Rome] PHP Notice:  Undefined variable: form in D:\Dev\Php\forum\cache\views\d--dev-php-forum-venus-apps-main-views-user-profile.volt.php on line 261
+[26-Jun-2018 09:20:38 Europe/Rome] PHP Stack trace:
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   1. {main}() D:\Dev\Php\forum\public\index.php:0
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   2. Phalcon\Mvc\Application->handle() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:38 Europe/Rome] PHP   3. Phalcon\Mvc\View->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:39 Europe/Rome] PHP   4. Phalcon\Mvc\View->_engineRender() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:39 Europe/Rome] PHP   5. Phalcon\Mvc\View\Engine\Volt->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:39 Europe/Rome] PHP   6. Phalcon\Mvc\View\Engine\Volt->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:20:39 Europe/Rome] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[26-Jun-2018 09:20:42 Europe/Rome] PHP Fatal error:  Uncaught Error: Call to a member function messages() on null in D:\Dev\Php\forum\cache\views\d--dev-php-forum-venus-apps-main-views-user-profile.volt.php:261
+Stack trace:
+#0 [internal function]: unknown()
+#1 [internal function]: Phalcon\Mvc\View\Engine\Volt->render('D:\\Dev\\Php\\foru...', Array, true)
+#2 [internal function]: Phalcon\Mvc\View->_engineRender(Array, 'user/profile', true, true, NULL)
+#3 [internal function]: Phalcon\Mvc\View->render('user', 'profile', Array)
+#4 D:\Dev\Php\forum\public\index.php(83): Phalcon\Mvc\Application->handle()
+#5 {main}
+  thrown in D:\Dev\Php\forum\cache\views\d--dev-php-forum-venus-apps-main-views-user-profile.volt.php on line 261
+[26-Jun-2018 07:34:48 UTC] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[26-Jun-2018 09:34:48 Europe/Rome] PHP Notice:  Undefined variable: form in D:\Dev\Php\forum\cache\views\d--dev-php-forum-venus-apps-main-views-user-profile.volt.php on line 257
+[26-Jun-2018 09:34:48 Europe/Rome] PHP Stack trace:
+[26-Jun-2018 09:34:48 Europe/Rome] PHP   1. {main}() D:\Dev\Php\forum\public\index.php:0
+[26-Jun-2018 09:34:48 Europe/Rome] PHP   2. Phalcon\Mvc\Application->handle() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:34:48 Europe/Rome] PHP   3. Phalcon\Mvc\View->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:34:48 Europe/Rome] PHP   4. Phalcon\Mvc\View->_engineRender() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:34:48 Europe/Rome] PHP   5. Phalcon\Mvc\View\Engine\Volt->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:34:48 Europe/Rome] PHP   6. Phalcon\Mvc\View\Engine\Volt->render() D:\Dev\Php\forum\public\index.php:83
+[26-Jun-2018 09:34:48 Europe/Rome] XDebug could not open the remote debug file '/tmp/xdebug/xdebug.log'.
+[26-Jun-2018 09:34:50 Europe/Rome] PHP Fatal error:  Uncaught Error: Call to a member function messages() on null in D:\Dev\Php\forum\cache\views\d--dev-php-forum-venus-apps-main-views-user-profile.volt.php:257
+Stack trace:
+#0 [internal function]: unknown()
+#1 [internal function]: Phalcon\Mvc\View\Engine\Volt->render('D:\\Dev\\Php\\foru...', Array, true)
+#2 [internal function]: Phalcon\Mvc\View->_engineRender(Array, 'user/profile', true, true, NULL)
+#3 [internal function]: Phalcon\Mvc\View->render('user', 'profile', Array)
+#4 D:\Dev\Php\forum\public\index.php(83): Phalcon\Mvc\Application->handle()
+#5 {main}
+  thrown in D:\Dev\Php\forum\cache\views\d--dev-php-forum-venus-apps-main-views-user-profile.volt.php on line 257
